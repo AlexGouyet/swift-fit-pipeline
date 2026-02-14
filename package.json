@@ -1,0 +1,20 @@
+{
+  "name": "swiftfit-proposal-engine",
+  "version": "1.0.0",
+  "description": "Swift Fit Events — AI-powered proposal generation pipeline",
+  "main": "generate.js",
+  "scripts": {
+    "generate": "node generate.js",
+    "deploy": "node deploy.js",
+    "proposal": "node proposal.js",
+    "demo": "node generate.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "csv-parse": "^6.1.0",
+    "handlebars": "^4.7.8"
+  }
+}

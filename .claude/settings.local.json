@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ssh:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:gist.github.com)",
+      "WebFetch(domain:gist.githubusercontent.com)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill -9)",
+      "Bash(cat:*)",
+      "Bash(curl:*)",
+      "Bash(scp:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.pipecat.ai)",
+      "Bash(brew install:*)",
+      "Bash(node --version:*)",
+      "Bash(npm:*)",
+      "Bash(brew reinstall:*)",
+      "Bash(node generate.js:*)",
+      "Bash(node proposal.js:*)",
+      "Bash(open \"/Users/alexgouyet/openclaw test/output/base-power.html\")",
+      "Bash(open:*)",
+      "Bash(npx vercel:*)",
+      "Bash(node deploy.js:*)",
+      "Bash(VERCEL_ORG_ID=team_Xc1FN9XSNtI574c5PwNExlSI npx vercel:*)",
+      "Bash(script -q /dev/null npx vercel link --scope alexanders-projects-f99ad7d6 --yes)",
+      "Bash(script -q /dev/null npx vercel --yes --prod)",
+      "WebFetch(domain:docs.linkt.ai)",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(__NEW_LINE_33a8195131bfcbd1__ echo \"===\")",
+      "Bash(__NEW_LINE_33a8195131bfcbd1__ curl -s -H \"x-api-key: sk-wfugGJeL7cb_Ch_X7yv0XNE_rIQOfYcf3ndt52yb-JY\" \"https://api.linkt.ai/v1/entity/search?q=Apptronik&page_size=1\")",
+      "Bash(done)",
+      "Bash(node:*)",
+      "WebFetch(domain:www.linkt.ai)",
+      "WebFetch(domain:luma.com)",
+      "WebFetch(domain:www.moltathon.xyz)",
+      "Bash(git config:*)",
+      "Bash(gh auth:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{companyName}} × Swift Fit Events — Wellness Experience Proposal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --swift-orange: #E8652D;
+      --swift-orange-light: #FF8B5E;
+      --swift-dark: #1A1A2E;
+      --swift-charcoal: #2D2D44;
+      --swift-warm: #FFF8F5;
+      --swift-cream: #FFFAF7;
+      --swift-gray: #6B7280;
+      --swift-light-gray: #F3F4F6;
+      --swift-green: #10B981;
+      --swift-green-light: #D1FAE5;
+      --gradient-warm: linear-gradient(135deg, #E8652D 0%, #FF8B5E 50%, #FFB088 100%);
+      --gradient-dark: linear-gradient(135deg, #1A1A2E 0%, #2D2D44 100%);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
+      --shadow-glow: 0 0 40px rgba(232,101,45,0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--swift-dark);
+      background: var(--swift-cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--gradient-dark);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('{{heroImage}}') center/cover no-repeat;
+      opacity: 0.35;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26,26,46,0.7) 0%, rgba(26,26,46,0.9) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 40px 80px;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .hero-logos img {
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .hero-logos img.company-logo {
+      filter: brightness(0) invert(1);
+    }
+
+    .hero-logos .logo-divider {
+      width: 2px;
+      height: 40px;
+      background: rgba(255,255,255,0.3);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(232,101,45,0.2);
+      border: 1px solid rgba(232,101,45,0.4);
+      color: var(--swift-orange-light);
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      background: var(--gradient-warm);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: rgba(255,255,255,0.7);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      font-weight: 300;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta-item {
+      text-align: center;
+    }
+
+    .hero-meta-item .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 4px;
+    }
+
+    .hero-meta-item .value {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--swift-orange-light);
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--swift-orange);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--swift-dark);
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--swift-gray);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ===== INTRO ===== */
+    .intro-card {
+      background: white;
+      border-radius: 20px;
+      padding: 48px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .intro-greeting {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--swift-dark);
+    }
+
+    .intro-body {
+      font-size: 16px;
+      color: var(--swift-charcoal);
+      line-height: 1.8;
+    }
+
+    .intro-body p {
+      margin-bottom: 16px;
+    }
+
+    .intro-signature {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--swift-light-gray);
+      font-weight: 600;
+      color: var(--swift-dark);
+    }
+
+    .intro-signature .title {
+      font-weight: 400;
+      color: var(--swift-gray);
+      font-size: 14px;
+    }
+
+    /* ===== EXPERIENCE CARDS ===== */
+    .experiences-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .exp-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .exp-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .exp-card-img {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .exp-card-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .badge-core {
+      background: var(--swift-orange);
+      color: white;
+    }
+
+    .badge-addon {
+      background: var(--swift-green);
+      color: white;
+    }
+
+    .badge-optional {
+      background: white;
+      color: var(--swift-charcoal);
+      border: 1px solid #E5E7EB;
+    }
+
+    .exp-card-body {
+      padding: 24px;
+    }
+
+    .exp-card-category {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--swift-orange);
+      margin-bottom: 8px;
+    }
+
+    .exp-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--swift-dark);
+      margin-bottom: 8px;
+    }
+
+    .exp-card-desc {
+      font-size: 14px;
+      color: var(--swift-gray);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .exp-card-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 16px;
+      border-top: 1px solid var(--swift-light-gray);
+    }
+
+    .exp-card-price .amount {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--swift-dark);
+    }
+
+    .exp-card-price .unit {
+      font-size: 12px;
+      color: var(--swift-gray);
+    }
+
+    /* ===== QUANTITY CONTROLS ===== */
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .qty-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1.5px solid var(--swift-light-gray);
+      background: white;
+      color: var(--swift-dark);
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      user-select: none;
+    }
+
+    .qty-btn:hover {
+      border-color: var(--swift-orange);
+      color: var(--swift-orange);
+      background: var(--swift-warm);
+    }
+
+    .qty-btn:active {
+      transform: scale(0.95);
+    }
+
+    .qty-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--swift-dark);
+      min-width: 24px;
+      text-align: center;
+    }
+
+    .qty-label {
+      font-size: 12px;
+      color: var(--swift-gray);
+      margin-left: 4px;
+    }
+
+    /* ===== UPGRADE TOGGLE ===== */
+    .upgrade-toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--swift-light-gray);
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      background: #D1D5DB;
+      border-radius: 24px;
+      transition: 0.3s;
+    }
+
+    .toggle-slider:before {
+      content: '';
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background: white;
+      border-radius: 50%;
+      transition: 0.3s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    }
+
+    .toggle-switch input:checked + .toggle-slider {
+      background: var(--swift-orange);
+    }
+
+    .toggle-switch input:checked + .toggle-slider:before {
+      transform: translateX(20px);
+    }
+
+    .toggle-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--swift-gray);
+      cursor: pointer;
+    }
+
+    .toggle-label.active {
+      color: var(--swift-orange);
+      font-weight: 600;
+    }
+
+    /* ===== LIVE PRICE BADGE ===== */
+    .live-price-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--swift-warm);
+      border: 1px solid rgba(232,101,45,0.2);
+      color: var(--swift-orange);
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-left: 12px;
+    }
+
+    .live-price-badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--swift-orange);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* ===== CARD DISABLED STATE ===== */
+    .exp-card.disabled {
+      opacity: 0.5;
+      transform: scale(0.98);
+    }
+
+    .exp-card.disabled .exp-card-img {
+      filter: grayscale(0.5);
+    }
+
+    /* ===== UPDATED LINE ITEM (dynamic) ===== */
+    .line-item.removed {
+      opacity: 0.35;
+      text-decoration: line-through;
+    }
+
+    .line-item-qty {
+      font-size: 13px;
+      color: var(--swift-gray);
+      min-width: 30px;
+      text-align: center;
+    }
+
+    /* ===== INVESTMENT SUMMARY ===== */
+    .investment-section {
+      background: white;
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .investment-header {
+      background: var(--gradient-dark);
+      padding: 40px 48px;
+      color: white;
+    }
+
+    .investment-header .section-label {
+      color: var(--swift-orange-light);
+    }
+
+    .investment-header .section-title {
+      color: white;
+    }
+
+    .investment-body {
+      padding: 0 48px 48px;
+    }
+
+    .line-items {
+      margin-top: 0;
+    }
+
+    .line-item-group {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--swift-light-gray);
+    }
+
+    .line-item-group:last-child {
+      border-bottom: none;
+    }
+
+    .line-item-group-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--swift-orange);
+      margin-bottom: 16px;
+    }
+
+    .line-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .line-item-name {
+      font-size: 15px;
+      color: var(--swift-charcoal);
+      flex: 1;
+    }
+
+    .line-item-detail {
+      font-size: 13px;
+      color: var(--swift-gray);
+      margin: 0 24px;
+      text-align: right;
+      min-width: 140px;
+    }
+
+    .line-item-total {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--swift-dark);
+      min-width: 80px;
+      text-align: right;
+    }
+
+    .investment-totals {
+      margin-top: 32px;
+      padding: 32px;
+      background: var(--swift-warm);
+      border-radius: 16px;
+    }
+
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+    }
+
+    .total-row.subtotal {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(232,101,45,0.2);
+    }
+
+    .total-row.grand {
+      padding-top: 16px;
+    }
+
+    .total-row .label {
+      font-size: 15px;
+      color: var(--swift-charcoal);
+    }
+
+    .total-row .amount {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--swift-dark);
+    }
+
+    .total-row.grand .label {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .total-row.grand .amount {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--swift-orange);
+    }
+
+    .total-note {
+      font-size: 13px;
+      color: var(--swift-gray);
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    /* ===== SOCIAL PROOF ===== */
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .proof-stat {
+      background: white;
+      border-radius: 16px;
+      padding: 32px 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .proof-stat .number {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--swift-orange);
+      margin-bottom: 4px;
+    }
+
+    .proof-stat .desc {
+      font-size: 14px;
+      color: var(--swift-gray);
+    }
+
+    .testimonials {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .testimonial {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .testimonial::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      color: var(--swift-orange);
+      opacity: 0.2;
+      position: absolute;
+      top: 8px;
+      left: 24px;
+      line-height: 1;
+    }
+
+    .testimonial-text {
+      font-size: 15px;
+      color: var(--swift-charcoal);
+      line-height: 1.7;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--swift-dark);
+    }
+
+    .testimonial-role {
+      font-size: 12px;
+      color: var(--swift-gray);
+    }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      background: var(--gradient-dark);
+      padding: 80px 40px;
+      text-align: center;
+      color: white;
+    }
+
+    .cta-section .section-title {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .cta-section .section-subtitle {
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 40px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--gradient-warm);
+      color: white;
+      box-shadow: 0 4px 20px rgba(232,101,45,0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(232,101,45,0.5);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 13px;
+      color: var(--swift-gray);
+    }
+
+    .footer a {
+      color: var(--swift-orange);
+      text-decoration: none;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .section { padding: 48px 20px; }
+      .hero-content { padding: 80px 20px 60px; }
+      .hero-meta { gap: 20px; }
+      .intro-card { padding: 28px; }
+      .investment-header { padding: 28px; }
+      .investment-body { padding: 0 28px 28px; }
+      .investment-totals { padding: 20px; }
+      .proof-grid { grid-template-columns: 1fr; }
+      .line-item { flex-wrap: wrap; gap: 4px; }
+      .line-item-detail { margin: 0; min-width: auto; text-align: left; }
+      .exp-card-img { height: 160px; }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-in {
+      animation: fadeInUp 0.6s ease-out both;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content animate-in">
+      <div class="hero-logos">
+        <img class="company-logo" src="{{companyLogo}}" alt="{{companyName}}" onerror="this.onerror=null;this.src='{{companyLogoFallback}}'">
+        <div class="logo-divider"></div>
+        <img src="{{swiftLogo}}" alt="Swift Fit Events">
+      </div>
+      <div class="hero-badge">Custom Wellness Proposal</div>
+      <h1>Elevate Your Team's<br><span>Wellness Experience</span></h1>
+      <p class="hero-subtitle">A personalized corporate wellness activation designed exclusively for {{companyName}}'s team in Austin, TX.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="label">Prepared For</div>
+          <div class="value">{{contactName}}</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="label">Team Size</div>
+          <div class="value">{{groupSize}} People</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="label">Experience Type</div>
+          <div class="value">{{eventType}}</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="label">Date</div>
+          <div class="value">{{proposalDate}}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONALIZED INTRO -->
+  <section class="section">
+    <div class="intro-card animate-in">
+      <div class="intro-greeting">Hi {{contactFirstName}},</div>
+      <div class="intro-body">
+        <p>Thanks for your interest in bringing a world-class wellness experience to your team at {{companyName}}. At Swift Fit Events, we design high-energy, connection-driven activations that bring teams together through movement, mindfulness, and memorable moments.</p>
+        <p>Based on your team of <strong>{{groupSize}} people</strong> and your interest in a <strong>{{eventType}}</strong> experience, we've curated a selection of our most popular activations tailored specifically for {{companyName}}. Every element below is designed to energize your team, spark genuine connection, and create a wellness experience they'll be talking about for weeks.</p>
+        <p>Below you'll find our recommended package, transparent pricing, and optional premium upgrades. Let's make this unforgettable.</p>
+      </div>
+      <div class="intro-signature">
+        Alex Gouyet<br>
+        <span class="title">Founder, Swift Fit Events</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOMMENDED EXPERIENCES -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Curated for {{companyName}}</div>
+      <div class="section-title">Your Recommended Experiences</div>
+      <div class="section-subtitle">Hand-picked activations sized and priced for your team of {{groupSize}}</div>
+    </div>
+
+    <div class="experiences-grid">
+      {{#each coreItems}}
+      <div class="exp-card animate-in delay-{{@index}}" data-item-id="core-{{@index}}" data-tier="core" data-unit-price="{{this.unitPrice}}" data-qty="{{this.qty}}" data-name="{{this.name}}" data-unit-type="{{this.unit}}">
+        <div class="exp-card-img" style="background-image: url('{{this.image}}')">
+          <span class="exp-card-badge badge-core">Recommended</span>
+        </div>
+        <div class="exp-card-body">
+          <div class="exp-card-category">{{this.category}}</div>
+          <div class="exp-card-title">{{this.name}}</div>
+          <div class="exp-card-desc">{{this.description}}</div>
+          <div class="exp-card-price">
+            <div>
+              <div class="amount item-total">{{this.formattedTotal}}</div>
+              <div class="unit">{{this.displayUnit}}</div>
+            </div>
+          </div>
+          <div class="qty-controls">
+            <button class="qty-btn" onclick="adjustQty(this, -1)">−</button>
+            <span class="qty-value">{{this.qty}}</span>
+            <button class="qty-btn" onclick="adjustQty(this, 1)">+</button>
+            <span class="qty-label">units</span>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <!-- INCLUDED ADD-ONS -->
+  {{#if addonItems.length}}
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Included Extras</div>
+      <div class="section-title">Complimentary Add-Ons</div>
+      <div class="section-subtitle">Included to elevate every moment of your experience</div>
+    </div>
+
+    <div class="experiences-grid">
+      {{#each addonItems}}
+      <div class="exp-card animate-in" data-item-id="addon-{{@index}}" data-tier="addon" data-unit-price="{{this.unitPrice}}" data-qty="{{this.qty}}" data-name="{{this.name}}" data-unit-type="{{this.unit}}">
+        <div class="exp-card-img" style="background-image: url('{{this.image}}')">
+          <span class="exp-card-badge badge-addon">Included</span>
+        </div>
+        <div class="exp-card-body">
+          <div class="exp-card-category">{{this.category}}</div>
+          <div class="exp-card-title">{{this.name}}</div>
+          <div class="exp-card-desc">{{this.description}}</div>
+          <div class="exp-card-price">
+            <div>
+              <div class="amount item-total">{{this.formattedTotal}}</div>
+              <div class="unit">{{this.displayUnit}}</div>
+            </div>
+          </div>
+          <div class="qty-controls">
+            <button class="qty-btn" onclick="adjustQty(this, -1)">−</button>
+            <span class="qty-value">{{this.qty}}</span>
+            <button class="qty-btn" onclick="adjustQty(this, 1)">+</button>
+            <span class="qty-label">units</span>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+  {{/if}}
+
+  <!-- PREMIUM UPGRADES -->
+  {{#if optionalItems.length}}
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Level Up</div>
+      <div class="section-title">Premium Upgrades</div>
+      <div class="section-subtitle">Take your experience to the next level with these popular additions</div>
+    </div>
+
+    <div class="experiences-grid">
+      {{#each optionalItems}}
+      <div class="exp-card animate-in disabled" data-item-id="optional-{{@index}}" data-tier="optional" data-unit-price="{{this.unitPrice}}" data-qty="{{this.qty}}" data-name="{{this.name}}" data-unit-type="{{this.unit}}" data-enabled="false">
+        <div class="exp-card-img" style="background-image: url('{{this.image}}')">
+          <span class="exp-card-badge badge-optional">Upgrade</span>
+        </div>
+        <div class="exp-card-body">
+          <div class="exp-card-category">{{this.category}}</div>
+          <div class="exp-card-title">{{this.name}}</div>
+          <div class="exp-card-desc">{{this.description}}</div>
+          <div class="exp-card-price">
+            <div>
+              <div class="amount item-total">{{this.formattedTotal}}</div>
+              <div class="unit">{{this.displayUnit}}</div>
+            </div>
+          </div>
+          <div class="upgrade-toggle">
+            <label class="toggle-switch">
+              <input type="checkbox" onchange="toggleUpgrade(this)">
+              <span class="toggle-slider"></span>
+            </label>
+            <span class="toggle-label" onclick="this.previousElementSibling.querySelector('input').click()">Add to package</span>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+  {{/if}}
+
+  <!-- INVESTMENT SUMMARY -->
+  <section class="section">
+    <div class="investment-section">
+      <div class="investment-header">
+        <div class="section-label">Your Investment <span class="live-price-badge"><span class="dot"></span> Live Pricing</span></div>
+        <div class="section-title">Investment Summary</div>
+      </div>
+      <div class="investment-body">
+        <div class="line-items">
+
+          <div class="line-item-group">
+            <div class="line-item-group-title">Core Experiences</div>
+            {{#each coreLineItems}}
+            <div class="line-item">
+              <div class="line-item-name">{{this.name}}</div>
+              <div class="line-item-detail">{{this.displayUnit}}</div>
+              <div class="line-item-total">{{this.formattedTotal}}</div>
+            </div>
+            {{/each}}
+          </div>
+
+          {{#if addonLineItems.length}}
+          <div class="line-item-group">
+            <div class="line-item-group-title">Included Add-Ons</div>
+            {{#each addonLineItems}}
+            <div class="line-item">
+              <div class="line-item-name">{{this.name}}</div>
+              <div class="line-item-detail">{{this.displayUnit}}</div>
+              <div class="line-item-total">{{this.formattedTotal}}</div>
+            </div>
+            {{/each}}
+          </div>
+          {{/if}}
+
+          {{#if optionalLineItems.length}}
+          <div class="line-item-group">
+            <div class="line-item-group-title">Premium Upgrades (Optional)</div>
+            {{#each optionalLineItems}}
+            <div class="line-item">
+              <div class="line-item-name">{{this.name}}</div>
+              <div class="line-item-detail">{{this.displayUnit}}</div>
+              <div class="line-item-total">{{this.formattedTotal}}</div>
+            </div>
+            {{/each}}
+          </div>
+          {{/if}}
+
+        </div>
+
+        <div class="investment-totals">
+          <div class="total-row subtotal">
+            <div class="label">Activation Subtotal</div>
+            <div class="amount">{{subtotal}}</div>
+          </div>
+          <div class="total-row">
+            <div class="label">Event Coordination & Management (15%)</div>
+            <div class="amount">{{coordFee}}</div>
+          </div>
+          <div class="total-row grand">
+            <div class="label">Total Investment</div>
+            <div class="amount">{{grandTotal}}</div>
+          </div>
+          {{#if hasOptional}}
+          <div class="total-note">With all premium upgrades: {{grandTotalWithUpgrades}}</div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Why Swift Fit</div>
+      <div class="section-title">Austin's Premier Corporate Wellness Partner</div>
+    </div>
+
+    <div class="proof-grid">
+      <div class="proof-stat animate-in">
+        <div class="number">500+</div>
+        <div class="desc">Corporate events produced in Austin</div>
+      </div>
+      <div class="proof-stat animate-in delay-1">
+        <div class="number">98%</div>
+        <div class="desc">Client satisfaction rating</div>
+      </div>
+      <div class="proof-stat animate-in delay-2">
+        <div class="number">50K+</div>
+        <div class="desc">Team members activated</div>
+      </div>
+    </div>
+
+    <div class="testimonials">
+      <div class="testimonial animate-in">
+        <div class="testimonial-text">Swift Fit completely transformed our offsite. The team was buzzing with energy for weeks after. Best investment we've made in team culture.</div>
+        <div class="testimonial-author">Sarah M.</div>
+        <div class="testimonial-role">VP of People, Series B Startup</div>
+      </div>
+      <div class="testimonial animate-in delay-1">
+        <div class="testimonial-text">From the cold plunge to the BBQ rub bar, every detail was perfect. Our team still talks about it months later. Swift Fit gets it.</div>
+        <div class="testimonial-author">Mike R.</div>
+        <div class="testimonial-role">Head of Culture, Enterprise Tech</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-title" style="font-family: 'Playfair Display', serif; font-size: 36px;">Ready to Energize Your Team?</div>
+    <div class="section-subtitle">Let's lock in your date and start building something unforgettable.</div>
+    <div class="cta-buttons">
+      <a href="mailto:alex@swiftfitevents.com?subject={{companyName}}%20Wellness%20Experience%20-%20Let's%20Go!&body=Hi%20Alex%2C%0A%0AWe're%20interested%20in%20the%20proposed%20wellness%20experience%20for%20{{companyName}}.%20Let's%20set%20up%20a%20time%20to%20finalize%20details.%0A%0ABest%2C%0A{{contactFirstName}}" class="btn btn-primary">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 4l8 6 8-6"/></svg>
+        Let's Do This
+      </a>
+      <a href="tel:+15128889999" class="btn btn-secondary">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.11 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 11.91a16 16 0 006 6l2.27-2.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call Alex
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>This proposal was prepared exclusively for {{companyName}} by <a href="https://swiftfitevents.com">Swift Fit Events</a>.</p>
+    <p style="margin-top: 8px;">Pricing valid for 30 days from {{proposalDate}}. All prices reflect 2026 rates.</p>
+  </footer>
+
+  <script>
+    // Simple scroll animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.exp-card, .proof-stat, .testimonial').forEach(el => {
+      observer.observe(el);
+    });
+
+    // ===== INTERACTIVE PRICING ENGINE =====
+    const COORD_FEE_RATE = 0.15;
+
+    function fmt(amount) {
+      return '$' + amount.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    }
+
+    function adjustQty(btn, delta) {
+      const card = btn.closest('.exp-card');
+      const qtyEl = card.querySelector('.qty-value');
+      let qty = parseInt(qtyEl.textContent) + delta;
+      if (qty < 0) qty = 0;
+      qtyEl.textContent = qty;
+      card.dataset.qty = qty;
+
+      // Update card price
+      const unitPrice = parseFloat(card.dataset.unitPrice);
+      const total = unitPrice * qty;
+      card.querySelector('.item-total').textContent = fmt(total);
+
+      // Update the unit description text (e.g. "75 people × $6.00")
+      const unitEl = card.querySelector('.unit');
+      if (unitEl) {
+        const unitType = card.dataset.unitType || '';
+        if (unitType === 'Per Person') {
+          unitEl.textContent = qty + ' people × $' + unitPrice.toFixed(2);
+        } else if (unitType === 'Per Hour') {
+          unitEl.textContent = qty + ' hours × $' + unitPrice.toFixed(2);
+        }
+        // Flat fee stays as-is
+      }
+
+      // Dim card if qty is 0
+      if (qty === 0) {
+        card.classList.add('disabled');
+      } else {
+        card.classList.remove('disabled');
+      }
+
+      recalcTotals();
+    }
+
+    function toggleUpgrade(checkbox) {
+      const card = checkbox.closest('.exp-card');
+      const label = card.querySelector('.toggle-label');
+      if (checkbox.checked) {
+        card.classList.remove('disabled');
+        card.dataset.enabled = 'true';
+        label.classList.add('active');
+        label.textContent = 'Added';
+      } else {
+        card.classList.add('disabled');
+        card.dataset.enabled = 'false';
+        label.classList.remove('active');
+        label.textContent = 'Add to package';
+      }
+      recalcTotals();
+    }
+
+    function recalcTotals() {
+      let coreTotal = 0, addonTotal = 0, optionalTotal = 0;
+
+      // Core items
+      document.querySelectorAll('.exp-card[data-tier="core"]').forEach(card => {
+        const qty = parseInt(card.dataset.qty) || 0;
+        const unitPrice = parseFloat(card.dataset.unitPrice) || 0;
+        coreTotal += unitPrice * qty;
+      });
+
+      // Addon items
+      document.querySelectorAll('.exp-card[data-tier="addon"]').forEach(card => {
+        const qty = parseInt(card.dataset.qty) || 0;
+        const unitPrice = parseFloat(card.dataset.unitPrice) || 0;
+        addonTotal += unitPrice * qty;
+      });
+
+      // Optional items (only if enabled)
+      document.querySelectorAll('.exp-card[data-tier="optional"]').forEach(card => {
+        if (card.dataset.enabled === 'true') {
+          const qty = parseInt(card.dataset.qty) || 0;
+          const unitPrice = parseFloat(card.dataset.unitPrice) || 0;
+          optionalTotal += unitPrice * qty;
+        }
+      });
+
+      const subtotal = coreTotal + addonTotal;
+      const coordFee = Math.round(subtotal * COORD_FEE_RATE);
+      const grandTotal = subtotal + coordFee;
+      const grandTotalWithUpgrades = subtotal + optionalTotal + Math.round((subtotal + optionalTotal) * COORD_FEE_RATE);
+
+      // Update investment summary
+      const subtotalEl = document.querySelector('.total-row.subtotal .amount');
+      const coordEl = document.querySelectorAll('.total-row .amount')[1];
+      const grandEl = document.querySelector('.total-row.grand .amount');
+      const noteEl = document.querySelector('.total-note');
+
+      if (subtotalEl) subtotalEl.textContent = fmt(subtotal);
+      if (coordEl) coordEl.textContent = fmt(coordFee);
+      if (grandEl) {
+        grandEl.textContent = fmt(grandTotal);
+        // Add a little animation
+        grandEl.style.transform = 'scale(1.05)';
+        setTimeout(() => grandEl.style.transition = 'transform 0.3s', 0);
+        setTimeout(() => grandEl.style.transform = 'scale(1)', 150);
+      }
+      if (noteEl && optionalTotal > 0) {
+        noteEl.textContent = 'With selected upgrades: ' + fmt(grandTotalWithUpgrades);
+        noteEl.style.display = 'block';
+      } else if (noteEl) {
+        noteEl.style.display = 'none';
+      }
+
+      // Update line items in investment section
+      updateLineItems();
+    }
+
+    function updateLineItems() {
+      // Update each line item total dynamically
+      document.querySelectorAll('.line-item-group').forEach(group => {
+        const title = group.querySelector('.line-item-group-title');
+        if (!title) return;
+        const isOptional = title.textContent.includes('Premium') || title.textContent.includes('Optional');
+
+        group.querySelectorAll('.line-item').forEach((li, idx) => {
+          const tierPrefix = isOptional ? 'optional' : (title.textContent.includes('Add-On') ? 'addon' : 'core');
+          const card = document.querySelector(`[data-item-id="${tierPrefix}-${idx}"]`);
+          if (!card) return;
+
+          const qty = parseInt(card.dataset.qty) || 0;
+          const unitPrice = parseFloat(card.dataset.unitPrice) || 0;
+          const total = unitPrice * qty;
+          const totalEl = li.querySelector('.line-item-total');
+          if (totalEl) totalEl.textContent = fmt(total);
+
+          // Show/hide based on qty or enabled state
+          if (isOptional) {
+            li.classList.toggle('removed', card.dataset.enabled !== 'true');
+          } else {
+            li.classList.toggle('removed', qty === 0);
+          }
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

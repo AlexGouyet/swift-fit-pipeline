@@ -2,6 +2,14 @@
 
 **Winner, Sales Molty Award** — Best AI-powered sales tool at Moltathon ATX 2025.
 
+## Demo
+
+[![Automated Proposal Creation for Corporate Wellness Events](https://cdn.loom.com/sessions/thumbnails/770f552c35b645fd87a88579e30f035e-with-play.gif)](https://www.loom.com/share/770f552c35b645fd87a88579e30f035e)
+
+*Full pipeline demo: lead signal detected → enrichment → pricing → interactive proposal deployed → Telegram alert. 13 seconds end-to-end.*
+
+---
+
 An end-to-end AI-powered sales pipeline that detects corporate lead signals, auto-generates personalized proposals with interactive pricing, and delivers them via Telegram -- all in under 30 seconds.
 
 Built for [Swift Fit Events](https://swiftfitevents.com), an Austin-based corporate wellness company. Built solo in ~6 hours.

@@ -82,7 +82,7 @@ A corporate lead signal fires. 13 seconds later, the sales rep has a Telegram me
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
 | **Lead Intelligence** | [Linkt AI](https://linkt.ai) API | Entity search, company enrichment (industry, HQ, employees, revenue, contacts) |
-| **AI Agent** | [OpenClaw](https://github.com/AlexGouyet/openclaw) | Personal AI OS — always-on autonomous agent that parses natural language, executes skills, and relays results via Telegram. *See repo.* |
+| **AI Agent** | OpenClaw | Personal AI OS — always-on autonomous agent that parses natural language, executes skills, and relays results via Telegram. |
 | **Pricing Catalog** | Custom CSV engine (146 SKUs) | Maps group size + event type to recommended activations with tiered pricing |
 | **Proposal Generator** | Handlebars + inline HTML/CSS/JS | Single-file landing pages with interactive pricing (qty controls, toggle upgrades, live recalculation) |
 | **Deployment** | Vercel CLI (headless) | Instant deploys to unique URLs (e.g. `base-power.vercel.app`) |

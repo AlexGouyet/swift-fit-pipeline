@@ -1,10 +1,10 @@
-# Swift Fit AI Sales Pipeline — 🏆 Moltathon ATX 2025
+# Pipeline Lobster 🦞 — 🏆 Moltathon ATX 2025
 
 **Winner, Sales Molty Award** — Best AI-powered sales tool at Moltathon ATX 2025.
 
 ## Demo
 
-[![Automated Proposal Creation for Corporate Wellness Events](https://github.com/AlexGouyet/swift-fit-pipeline/raw/main/assets/pipeline-demo.gif)](https://www.loom.com/share/770f552c35b645fd87a88579e30f035e)
+[![Automated Proposal Creation for Corporate Wellness Events](https://github.com/AlexGouyet/pipeline-lobster/raw/main/assets/pipeline-demo.gif)](https://www.loom.com/share/770f552c35b645fd87a88579e30f035e)
 
 *Full pipeline demo: lead signal detected → enrichment → pricing → interactive proposal deployed → Telegram alert. 13 seconds end-to-end.*
 

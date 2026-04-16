@@ -1,10 +1,10 @@
 # Swift Fit AI Sales Pipeline
 
-**Moltathon ATX 2025 | SalesMolty Track**
+🏆 **Winner — Sales Molty, Moltathon ATX 2025**
 
 An end-to-end AI-powered sales pipeline that detects corporate lead signals, auto-generates personalized proposals with interactive pricing, and delivers them via Telegram -- all in under 30 seconds.
 
-Built for [Swift Fit Events](https://swiftfitevents.com), an Austin-based corporate wellness company.
+Built for [Swift Fit Events](https://swiftfitevents.com), an Austin-based corporate wellness company. Built solo in ~6 hours.
 
 ---
 
@@ -74,7 +74,7 @@ A corporate lead signal fires. 13 seconds later, the sales rep has a Telegram me
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
 | **Lead Intelligence** | [Linkt AI](https://linkt.ai) API | Entity search, company enrichment (industry, HQ, employees, revenue, contacts) |
-| **AI Agent** | [OpenClaw](https://openclaw.com) | Telegram bot gateway -- parses natural language, executes skills, relays results |
+| **AI Agent** | [OpenClaw](https://github.com/AlexGouyet/openclaw) | Telegram bot gateway -- parses natural language, executes skills, relays results |
 | **Pricing Catalog** | Custom CSV engine (146 SKUs) | Maps group size + event type to recommended activations with tiered pricing |
 | **Proposal Generator** | Handlebars + inline HTML/CSS/JS | Single-file landing pages with interactive pricing (qty controls, toggle upgrades, live recalculation) |
 | **Deployment** | Vercel CLI (headless) | Instant deploys to unique URLs (e.g. `base-power.vercel.app`) |
@@ -177,7 +177,7 @@ The OpenClaw agent parses the request, runs the pipeline, and replies with the f
 
 ## How It Was Built
 
-Built in ~6 hours at Moltathon ATX. Zero external frameworks -- pure Node.js with only three npm dependencies (Handlebars for templating, csv-parse for the pricing catalog, minimist for CLI args). The landing pages are single-file HTML with inline CSS and JavaScript for maximum deployment simplicity.
+Won the Sales Molty award at Moltathon ATX 2025. Built solo in ~6 hours. Zero external frameworks -- pure Node.js with only three npm dependencies (Handlebars for templating, csv-parse for the pricing catalog, minimist for CLI args). The landing pages are single-file HTML with inline CSS and JavaScript for maximum deployment simplicity.
 
 The hardest parts:
 1. **Interactive pricing** -- Client-side JS that recalculates totals across 3 tiers with dynamic unit text (per person / per hour / flat) as quantities change
@@ -191,3 +191,4 @@ The hardest parts:
 **Alexander Gouyet** -- Solo builder
 
 Built with [Claude Code](https://claude.ai/code) as the AI pair programmer.
+

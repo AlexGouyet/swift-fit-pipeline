@@ -1,6 +1,6 @@
-# Swift Fit AI Sales Pipeline
+# Swift Fit AI Sales Pipeline — 🏆 Moltathon ATX 2025
 
-🏆 **Winner — Sales Molty, Moltathon ATX 2025**
+**Winner, Sales Molty Award** — Best AI-powered sales tool at Moltathon ATX 2025.
 
 An end-to-end AI-powered sales pipeline that detects corporate lead signals, auto-generates personalized proposals with interactive pricing, and delivers them via Telegram -- all in under 30 seconds.
 

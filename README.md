@@ -4,7 +4,7 @@
 
 ## Demo
 
-[![Automated Proposal Creation for Corporate Wellness Events](https://cdn.loom.com/sessions/thumbnails/770f552c35b645fd87a88579e30f035e-800c0b9d8afd4035.jpg)](https://www.loom.com/share/770f552c35b645fd87a88579e30f035e)
+[![Automated Proposal Creation for Corporate Wellness Events](https://cdn.loom.com/sessions/thumbnails/770f552c35b645fd87a88579e30f035e-800c0b9d8afd4035.gif)](https://www.loom.com/share/770f552c35b645fd87a88579e30f035e)
 
 *Full pipeline demo: lead signal detected → enrichment → pricing → interactive proposal deployed → Telegram alert. 13 seconds end-to-end.*
 
